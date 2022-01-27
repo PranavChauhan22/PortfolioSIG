@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Charm&family=Hind+Siliguri&family=Noto+Sans&family=Roboto&display=swap" rel="stylesheet">
+    <title>Personal Portfolio</title>
+</head>
+<style>
+* {
+  box-sizing: border-box;
+  
+}
+:root{
+    --primary-color:rgb(0, 123, 255);
+    --secondary-color:black;
+}
+body {
+  margin: 0px;
+  font-family: 'segoe ui';
+}
+
+.nav {
+  height: 50px;
+  width: 100%;
+  background-color: var(--primary-color);
+  position: relative;
+}
+
+.nav > .nav-header {
+  display: inline;
+}
+
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 22px;
+  color: #fff;
+  padding: 10px 10px 10px 10px;
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 18px;
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: #efefef;
+}
+
+.nav > .nav-links > a:hover {
+  background-color: var(--secondary-color);
+}
+
+.nav > #nav-check {
+  display: none;
+}
+.head-1{
+    font-size: 40px;
+    font-weight: bold;
+}
+.head-3{
+    color: var(--primary-color);
+}
+.lorem-text{
+    width: 400px;
+    color: gray;
+}
+.home-image{
+    width: 400px;
+
+
+}
+.home{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+}
+.btn-wrap{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  
+    
+}
+.btn1:hover{
+    background-color: white;
+    border: 2px solid var(--primary-color);
+    color: black;
+}
+.headings{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 30px;
+}
+.home{
+    padding: 20px;
+}
+.head-hobbies{
+    font-size: 30px;
+    color: var(--primary-color);
+    font-weight: bolder;
+    text-align: center;
+}
+.hobbies-headlines{
+    font-size: 15px;
+    margin-top: 10px;
+    color: gray;
+    font-weight: bolder;
+    text-align: center;
+}
+.btn1{
+    background-color: var(--primary-color);
+    width: 120px;
+    text-align: center;
+    padding: 10px;
+  
+    border-radius: 10px;
+    color: white;
+    margin-right: 20px;
+}
+.code,.music,.basketball,.travel,.cricket{
+    width: 80px;
+    height: 80px;
+}
+
+.icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.icontext{
+    font-size: 20px;
+    font-weight: bolder;
+    
+}
+
+.icon{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.btn2{
+    width: 120px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    color: var(--secondary-color);
+    border: 2px solid black;
+    
+}
+.icon{
+    margin: 40px;
+}
+.icons{
+    flex-wrap: wrap;
+}
+
+.section-1{
+    border: 2px solid black;
+    width: 400px;
+    height: 10px;
+}
+.skills-inner{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.skills-icon{
+    width: 30px;
+    height: 30px;
+}
+.skills-icon-css{
+    width: 20px;
+    height: 20px;
+}
+
+.rating{
+    margin-top: 20px;
+}
+.footer{
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+    width: 100vw;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    flex-wrap: wrap;
+    font-size: 20px;
+padding: 20px;
+}
+.section-2a{
+    background-color: black;
+    width: 250px;
+    height: 8px;
+}
+.section-2b{
+    background-color: black;
+    width: 300px;
+    height: 8px;
+}
+.section-2c{
+    background-color: black;
+    width: 280px;
+    height: 8px;
+}
+.section-2d{
+    background-color: black;
+    width: 350px;
+    height: 8px;
+}
+
+@media (min-width:720px) {
+.cricket,.music{
+    margin-top: 150px;
+    
+}
+.icontext{
+    color: var(--primary-color);
+    padding-top: 15px;
+}
+.icons{
+    margin-top: -50px;
+   
+}
+}
+@media screen and (max-width:460px) {
+    .head-1{
+        font-size: 20px;
+    }
+    .head-hobbies{
+        font-size: 20px;
+    }
+    .hobbies-headlines{
+        font-size: 10px;
+    }
+    .lorem-text
+    {
+        font-size: 15px;
+    }
+    .headings{
+        margin-left: 40px;
+    }
+    .section-1{
+        width: 200px;
+    }
+    .section-2a{
+        width: 100px;
+    }
+    .section-2b{
+        width: 160px;
+    }
+    .section-2c{
+        width: 180px;
+    }
+    .section-2d{
+        width: 120px;
+    }
+    .home-image{
+        width: 250px;
+    }
+    .lorem-text{
+    width: 280px;
+    color: gray;
+}
+    
+}
+@media (max-width:600px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+    background-color: va;
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #333;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+}
+html{
+    scroll-behavior: smooth;
+}
+.active{
+    border-bottom: 4px solid black;
+}
+.nav-title{
+    font-family: 'Charm', cursive;
+font-family: 'Hind Siliguri', sans-serif;
+font-family: 'Noto Sans', sans-serif;
+font-family: 'Roboto', sans-serif;
+
+}
+
+</style>
+<body>
+    <div class="nav">
+        <input type="checkbox" id="nav-check">
+        <div class="nav-header">
+          <div class="nav-title">
+            Pranav Chauhan
+          </div>
+        </div>
+        <div class="nav-btn">
+          <label for="nav-check">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </div>
+        
+        <div class="nav-links">
+          <a href="#Home" class="active" onclick="onClick(`Home-nav`)" id="Home-nav">Home</a>
+          <a href="#Skills" onclick="onClick(`Skills-nav`)" id="Skills-nav">Skills</a>
+          <a href="#Hobbies" onclick="onClick(`Hobbies-nav`)" id="Hobbies-nav">My Hobbies</a>
+        </div>
+      </div>
+      <div class="home" id="Home">
+          <div class="headings" data-aos="fade-right" data-aos-duration="2000">
+              <div class="head-1">Hi,</div>
+              <div class="head-1">I'am <span class="head-3">Pranav</span></div>
+              <div class="head-1">Web Developer</div>
+              <p class="lorem-text">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi at cupiditate, aperiam labore consequatur fugiat numquam doloremque animi quaerat alias fugit nostrum adipisci blanditiis et? Harum vero eum modi? Sit.
+              </p>
+              <div class="btn-wrap">
+                  
+                  <div class="btn1">Skills</div>
+                  <div class="btn2">Hobbies</div>
+                </div>
+          </div>
+          <img src="images/Home.jpg" class="home-image" data-aos="fade-up" data-aos-duration="2000">
+      </div>
+      <div class="hobbies" id="Hobbies">
+          <div class="head-hobbies">My Hobbies</div>
+          <div class="hobbies-headlines">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo, sequi?
+          </div>
+          <div class="icons">
+              <div class="icon">
+                <img src="/images/Code.png" class="code" data-aos="fade-up" data-aos-duration="2000">
+                <div class="icontext" data-aos="fade-right" data-aos-duration="2000">Code</div>
+              </div>
+              <div class="icon">
+                <img src="/images/Cricket.png" class="cricket" data-aos="fade-up" data-aos-duration="2000">
+                <div class="icontext" data-aos="fade-right" data-aos-duration="2000">Cricket</div>
+              </div>
+              <div class="icon">
+                <img src="/images/Basketball.png" class="basketball" data-aos="fade-up" data-aos-duration="2000">
+                <div class="icontext" data-aos="fade-right" data-aos-duration="2000">Basketball</div>
+              </div>
+              <div class="icon">
+                <img src="/images/Music.png" class="music" data-aos="fade-up" data-aos-duration="2000">
+                <div class="icontext" data-aos="fade-right" data-aos-duration="2000">Music</div>
+              </div>
+              <div class="icon">
+                <img src="/images/Travel.png" class="travel" data-aos="fade-up" data-aos-duration="2000">
+                <div class="icontext" data-aos="fade-right" data-aos-duration="2000">Travel</div>
+              </div>
+          </div>
+      </div>
+      <div class="skills" id="Skills">
+        <div class="head-hobbies">Skills</div>
+        <div class="hobbies-headlines">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo, sequi?
+        </div>
+        <div class="skills-inner">
+ 
+        <div class="skills-wrap">
+            <img src="/images/Skills.jpg" class="skills-image home-image" data-aos="fade-up" data-aos-duration="2000">
+        </div>
+        <div class="ratings" data-aos="fade-left" data-aos-duration="2000">
+            <div class="rating">
+                <img src="/images/Html.png" class="skills-icon">
+                <div class="section-1">
+                    <div class="section-2a"></div>
+                </div>
+            </div>
+            <div class="rating">
+                <img src="/images/CSS.png" class="skills-icon-css">
+                <div class="section-1">
+                    <div class="section-2b"></div>
+                </div>
+            </div>
+            <div class="rating">
+                <img src="/images/Javascript.png" class="skills-icon">
+                <div class="section-1">
+                    <div class="section-2c"></div>
+                </div>
+            </div>
+            <div class="rating">
+                <img src="/images/React.png" class="skills-icon">
+                <div class="section-1">
+                    <div class="section-2d"></div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer-text">All rights reserved | 2022 ©</div>
+            <div class="footer-text">Made with 🤍 by Pranav Chauhan</div>
+            <div class="footer-text">Privacy Policy.</div>
+        </div>
+    </div>
+      </div>
+</body>
+<script>
+    var arr=Array("Home-nav","Skills-nav","Hobbies-nav");
+    function onClick(props)
+    {
+      
+        for (let index = 0; index < arr.length; index++) {
+            const element = arr[index];
+            var ele=document.getElementById(element);
+            if(element===props){
+              ele.classList.add("active");
+            }else{
+                ele.classList.remove("active");
+            }
+            
+        }
+    }
+    AOS.init();
+    </script>
+</html>
